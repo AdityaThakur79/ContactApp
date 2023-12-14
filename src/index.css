@@ -1,13 +1,206 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo Tammudu 2', cursive;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    background: #EBF2F7 !important;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.wrapper {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    max-width: 1400px !important;
+    max-height: 1400px;
+    border-radius: 20px !important;
+    box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12), 0px 18px 88px -4px rgba(24, 39, 75, 0.14);
+}
+
+.top {
+    padding-top: 35px;
+    height: 250px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: rgb(226, 228, 255) !important;
+}
+
+.title {
+    margin-bottom: 30px;
+    font-weight: 800;
+    font-size: 4rem;
+    color: #212529;
+}
+
+.create-Btn {
+    background: rgb(249, 197, 102);
+    padding: 15px 44px;
+    font-size: 20px !important;
+    font-weight: 600;
+    border-radius: 8px !important;
+    box-shadow: 0 8px 28px -6px rgba(24, 39, 75, .12), 0 18px 88px -4px rgba(24, 39, 75, .14);
+}
+
+/* Contact Cards */
+.card-wrapper {
+    display: grid;
+    padding: 6rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+
+
+}
+
+
+.name {
+    margin-bottom: 0px !important;
+    padding: 5px;
+    padding-top: 15px;
+    padding-right: 10px;
+    padding-left: 15px;
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+    box-shadow: rgba(19, 34, 68, 0.12) 0px -6px 6px -6px;
+    border-bottom: 2px solid orange;
+    /* height: 150px;
+    min-width: 200px; */
+
+}
+
+.modal-body {
+    box-shadow: rgba(19, 34, 68, 0.12) 0px -6px 6px -6px;
+    border: 1px solid orange;
+}
+
+.submit-btn {
+
+    padding: 4px 30px;
+    background-color: rgb(255, 191, 72);
+    border-radius: 4px;
+
+}
+
+.submit-btn:hover {
+    background-color: orange;
+    border: black;
+    transition: 0.5s background;
+}
+
+/*responsive*/
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1024px) {
+
+    .wrapper {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        width: 900px !important;
+        border-radius: 20px !important;
+        box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12), 0px 18px 88px -4px rgba(24, 39, 75, 0.14);
+    }
+
+    .card-wrapper {
+        display: grid;
+        padding: 4rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .create-Btn {
+
+        padding: 10px 30px;
+        font-size: 16px !important;
+    }
+
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    .wrapper {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        width: 700px !important;
+        border-radius: 20px !important;
+        box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12), 0px 18px 88px -4px rgba(24, 39, 75, 0.14);
+    }
+
+    .card-wrapper {
+        display: grid;
+        padding: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+    }
+    .title {
+        font-size: 3rem;
+    }
+
+    .create-Btn {
+
+        padding: 10px 30px;
+        font-size: 16px !important;
+    }
+
+    .submit-btn {
+
+        padding: 4px 10px;
+        
+        font-size: 16px;
+    
+    }
+
+    .input-field{
+        padding: 4px 14px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .wrapper {
+        margin-top: 10px;
+        margin-bottom: 30px;
+        width: 350px !important;
+        border-radius: 20px !important;
+        box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12), 0px 18px 88px -4px rgba(24, 39, 75, 0.14);
+    }
+
+    .card-wrapper {
+        display: grid;
+        padding: 1.5rem;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+    }
+
+    .top {
+        padding-top: 20px;
+        height: 250px;
+        width: 100%;
+        border-radius: 20px;
+        background-color: rgb(226, 228, 255) !important;
+    }
+
+    .submit-btn {
+
+        padding: 4px 10px;
+        
+        font-size: 12px;
+    
+    }
+     
 }
